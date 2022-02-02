@@ -1,0 +1,41 @@
+//just tried making a couple of repeating patterns here
+function setup() {
+  createCanvas(600, 400);
+}
+
+function draw() {
+  background(150, 150, 300);
+  strokeWeight(12);
+  stroke(255);
+  
+  var x = 0;
+  
+  while (x <= width) {
+    fill(250, 12, 100)
+    stroke(35, 100, 250)
+  ellipse(x, 150, 50, 150)
+  x = x + 50;
+  }
+  
+  for (var x = 0; x < width; x = x + 50){
+    fill(250, 12, 100)
+    stroke(35, 100, 250)
+    square(x, 230, 100)
+  }
+    for (var x = 0; x < width; x = x + 25){
+    fill(250, 12, 100)
+    stroke(35, 100, 250)
+    ellipse(x, 10, 100, 100)
+    
+    
+    
+  }
+  
+  for (var x = 0; x < width; x = x + 25){
+    fill(250, 12, 100)
+    stroke(35, 100, 250)
+    ellipse(x, 390, 100, 100)
+     }
+       
+
+}
