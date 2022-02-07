@@ -1,0 +1,63 @@
+
+//placeholder text as I am having trouble putting the text onto the screen and don't know yet how to make the text change as the dot goes up the mountain
+let source_text = 'life is like a mountain, despite the way up being rocky your still always going up';
+function setup() {
+  createCanvas(400, 400);
+  
+  
+  fill(0, 0, 0)
+  
+  textFont("Helvetica");
+
+  textSize(20);
+  text(source_text, 10, 10, 200);
+}
+
+function draw() {
+  background(100, 180, 200);
+  noStroke()
+  
+
+  //shapes that make the mountain
+  fill(200, 200, 200)
+  triangle(20, 400, 300, 30, 400, 400);
+  
+  fill(400, 400, 400)
+  triangle(246, 100, 300, 30, 332, 150)
+  
+  fill(90, 90, 90)
+  triangle(320, 400, 300, 30, 400, 400);
+  
+  fill(150, 150, 200)
+  triangle(305, 132, 300, 30, 333, 150)
+  
+  // what I have used from P5 reference for exp(), messed with a couple of variables for x value and y value but wasn't able to find out how to change the starting position to the bottom of the mountain and the end to the top and would like to ask about that during class on monday also 
+  let xValue = map(mouseX, 0, width, 0, 2);
+  let yValue = exp(xValue);
+  
+  let y = map(yValue, 0, 8, height, 0);
+  
+  
+  
+  stroke(150);
+  line(mouseX, y, mouseX, height);
+  fill(0);
+  
+  noStroke();
+  ellipse(mouseX, y, 7, 7);
+  
+  
+  //also would like to discuss next time in class how to change exp to age to show how my life progressed, also don't understand what nfc does
+  let legend = 'age (' + nfc(xValue, 3) + ')\n= ' + nf(yValue, 1, 2);
+  stroke(150);
+  line(mouseX, y, mouseX, height);
+  fill(0);
+  text(legend, 160, 350);
+  noStroke();
+  ellipse(mouseX, y, 8, 60);
+  
+  
+  //sorry if it doesn't seem like a lot at this moment I tried making a lot of the functions that I wanted to use work but wasn't able to so I would like to ask about them during monday and wednesday class, for most functions here I settled with just putting them in for now to at least show what I want to use for this and what they will be used for
+  
+  
+}
